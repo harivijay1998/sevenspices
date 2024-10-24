@@ -115,6 +115,19 @@ header{
     margin-top: 40px;
 }
 
+.get_start:hover{
+    border: 2px solid#252b33;
+    background-color: #edf0ef;
+    color: #f6583b;
+}
+
+
+.view_more:hover{
+    border: #f6583b;
+    background-color: #f6583b;
+    color: aliceblue;
+}
+
 .view_more{
     padding-block: 15px;
     padding-inline: 40px;
@@ -387,19 +400,27 @@ header{
     border-radius: 200px;
     border: 1px solid #252b33;
     color: #f6583b;
+    position: relative;
+}
 
+.inner2_circle{
+    background-color: #aaa;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+}
 
-    span{
-        height: 10px;
-        width: 10px;
-        color: #f6583b;
+.dot:hover{
+    .inner2_circle{
+        background-color: #f6583b;
     }
-
 }
 
-.dot:hover,span:hover{
-    color: #f6583b;
-}
+
 
 .container5_flexbox{
     display: flex;
@@ -981,6 +1002,7 @@ footer{
     .get_start,.view_more{
         padding-inline: 100px;
     }
+
 
     .scrolldown{
         gap: 5px;
