@@ -26,16 +26,17 @@ header {
   position: sticky;
   z-index: 1000;
   top: 0;
-  background-color: #edf0ef;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .nav_head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-block: 30px;
+  padding-block: 25px;
   padding-inline: 150px;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
 }
 
 .img_logo {
@@ -447,6 +448,24 @@ header {
 .clientimg {
   height: 400px;
   width: 343px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40% ;
+}
+
+
+@keyframes appear{
+  from{
+    will-change: transform;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+  }
+
+  to{
+    will-change: transform;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+  }
 }
 
 .author {
@@ -549,7 +568,7 @@ header {
   z-index: 1000;
 }
 
-.phone_img {
+.phone_img1  ,.phone_img2{
   height: 727px;
   width: 386px;
   z-index: 1000;
@@ -557,6 +576,19 @@ header {
 .main_img {
   position: relative;
 }
+
+.phone_img3,.phone_img4,.phone_img5{
+  height: 727px;
+  width: 386px;
+  z-index: 1000;
+}
+
+.phone_img6{
+  height: 727px;
+  width: 386px;
+  z-index: 1000;
+}
+
 
 
 
@@ -683,16 +715,12 @@ header {
   z-index: 2;
 }
 
-.dot1:hover,
-.dot2:hover,
-.dot3:hover,
-.dot4:hover,
-.dot5:hover,
-.dot6:hover {
-  .inner_circle {
-    background-color: #f6583b;
-  }
+.phone_img2,.phone_img3,.phone_img4,.phone_img5{
+    display: none;
 }
+
+
+
 
 .contact_us {
   position: relative;
@@ -902,7 +930,7 @@ footer {
     margin-top: 0px;
   }
 
-  .phone_img {
+  .phone_img{
     width: 200px;
     height: fit-content;
   }
